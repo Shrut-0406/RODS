@@ -45,7 +45,101 @@ function App() {
 
   let product: number = Multiply(8, 7);
 
-  return printScore("70");
+return (
+  <div
+    style={{
+      minHeight: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "24px",
+      boxSizing: "border-box",
+      background:
+        "radial-gradient(circle at top left, #4338ca, transparent 45%), linear-gradient(135deg, #0f172a, #111827, #1e1b4b)",
+      fontFamily: "Inter, sans-serif",
+    }}
+  >
+    <div
+      style={{
+        width: "100%",
+        maxWidth: "432px",
+        boxSizing: "border-box",
+        padding: "36px",
+        borderRadius: "28px",
+        background: "rgba(255, 255, 255, 0.07)",
+        backdropFilter: "blur(24px)",
+        WebkitBackdropFilter: "blur(24px)",
+        border: "1px solid rgba(255, 255, 255, 0.16)",
+        boxShadow:
+          "0 24px 80px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12)",
+        color: "#ffffff",
+      }}
+    >
+      <form
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+      >
+        <div>
+          <label
+            htmlFor="name"
+            style={{
+              display: "block",
+              fontSize: "13px",
+              fontWeight: 600,
+              color: "rgba(255,255,255,0.85)",
+              marginBottom: "10px",
+            }}
+          >
+            Your name
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+            style={{
+              width: "100%",
+              boxSizing: "border-box",
+              padding: "15px 16px",
+              borderRadius: "14px",
+              border: "1px solid rgba(255,255,255,0.14)",
+              background: "rgba(15,23,42,0.45)",
+              color: "#ffffff",
+              fontSize: "14px",
+              outline: "none",
+              transition: "border-color 0.2s ease",
+            }}
+          />
+        </div>
+
+        <button
+          type="submit"
+          style={{
+            width: "100%",
+            padding: "15px",
+            marginTop: "4px",
+            border: "none",
+            borderRadius: "14px",
+            background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+            color: "#ffffff",
+            fontSize: "15px",
+            fontWeight: 700,
+            cursor: "pointer",
+            boxShadow: "0 8px 24px rgba(99,102,241,0.3)",
+            transition: "transform 0.2s ease",
+          }}
+        >
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+);
 }
 
 class Person {
